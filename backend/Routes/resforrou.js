@@ -37,4 +37,15 @@ resforrou.post('/resforrou',
         res.json({success:false});
     }
 })
+// In your routes file (e.g., resforrou.js)
+resforrou.get('/resumelist', async (req, res) => {
+    try {
+        const resumes = await user.find();
+        res.json(resumes);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send('Server Error');
+    }
+});
+
 module.exports=resforrou;
