@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+
+} from 'react-router-dom'
+import Login from './screens/Login';
+
+import Home from './screens/Home';
+import Pricing from './screens/Signup';
+import Navbar from './components/Navbar';
+import Resume_components from './components/Resume_compnent'
+import ResumeDisplay from './components/Resume_display';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+
+          <Route path="/" element={<Navbar/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/pricing" element={<Pricing/>}/>
+          <Route path="/resume-form" element={<Resume_components/>} />
+        <Route path="/resume-display" element={<ResumeDisplay />} />
+        </Routes>
+      </div>
+    </Router>
+   
   );
 }
 

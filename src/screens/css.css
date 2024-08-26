@@ -1,0 +1,201 @@
+/* .linbck{
+    background-color: black;
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    border-radius: 20px;
+}
+.lincmp{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+body{
+    background-color: rgb(213, 212, 212);
+}
+.sgnbck{
+    background-color: black;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: 150px;
+    border-color: rgb(236, 189, 189);
+    border-style: solid;
+    border-width: 15px;
+}
+.sgnele{
+    border-radius: 20px;
+    padding: 10px;
+} */
+/* Container and Box */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+  }
+  
+  .login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Titles and Text */
+  .login-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .login-subtitle {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .forgot-password {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Inputs and Button */
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  /* Container and Box */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  }
+  
+  .signup-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Titles and Text */
+  .signup-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  /* Inputs and Button */
+  .signup-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .signup-input:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.2);
+    outline: none;
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+  }
+  
+  .signup-button:hover {
+    background-color: #e63946;
+    transform: translateY(-2px);
+  }
+  
+  .signup-button:active {
+    transform: translateY(0);
+  }
+  

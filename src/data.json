@@ -1,0 +1,18 @@
+[
+    {
+        "item":"chicken biryani",
+        "price":150
+    },
+    {
+        "item":"mutton biryani",
+        "price":250
+    },
+    {
+        "item":"chicken fried rice",
+        "price":80
+    },
+    {
+        "item":"chicken noodles",
+        "price":80
+    }
+]
