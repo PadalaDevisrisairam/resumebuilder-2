@@ -84,7 +84,7 @@ function Login() {
     }
      else {
       alert("You nailed it");
-      navigator("/");
+      navigator("/home");
     }
   }
 

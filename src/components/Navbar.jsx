@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './nav_home.css'
+import shield from './shield.png'
+import customize from './customize.png'
+import easytouse from './snap.png'
 export default function Navbar() {
   return (
     <div>
@@ -14,10 +17,10 @@ export default function Navbar() {
 
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/login">Login</Link>
+                <Link className="nav-link" to="/">Login</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/pricing">Signup</Link>
@@ -34,24 +37,24 @@ export default function Navbar() {
         <header className="header">
           <h1 className="title">Build Your Professional Resume</h1>
           <p className="subtitle">Create a stunning resume in minutes with our easy-to-use builder.</p>
-          <button className="cta-button">Get Started</button>
+          <Link className='btn btn-success ' to='/resumeform'>Create-Resume</Link>
         </header>
 
         <section className="features-section">
           <h2>Why Choose Us?</h2>
           <div className="features">
             <div className="feature">
-              <img src="customizable-templates.png" alt="Customizable Templates" />
+              <img src={customize} alt='secure'/>
               <h3>Customizable Templates</h3>
               <p>Select from a variety of templates to suit your professional needs.</p>
             </div>
             <div className="feature">
-              <img src="easy-to-use.png" alt="Easy to Use" />
+              <img src={easytouse} alt="Easy to Use" />
               <h3>Easy to Use</h3>
               <p>Our intuitive builder helps you create a resume effortlessly.</p>
             </div>
             <div className="feature">
-              <img src="secure.png" alt="Secure" />
+              <img src={shield} alt="Secure" />
               <h3>Secure</h3>
               <p>Your data is safe with us, ensuring complete privacy and security.</p>
             </div>
@@ -63,11 +66,11 @@ export default function Navbar() {
           <div className="testimonials">
             <div className="testimonial">
               <p>"This resume builder made it so easy to create a professional resume. Highly recommend!"</p>
-              <p>- Sarah K.</p>
+              <p>- Sairam p.</p>
             </div>
             <div className="testimonial">
               <p>"A user-friendly tool with great templates. I landed my job thanks to this!"</p>
-              <p>- John D.</p>
+              <p>- Sairam p.</p>
             </div>
           </div>
         </section>
@@ -76,7 +79,7 @@ export default function Navbar() {
           <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </footer>
       </div>
-
+    
 
     </div>
   )

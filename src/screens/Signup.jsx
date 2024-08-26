@@ -151,7 +151,7 @@ function Signup() {
                   <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                 </div>
                 <button type="submit" className="btn btn-primary w-100 mb-2">Submit</button>
-                <Link to='/login' className="btn btn-secondary w-100">Already a user? Login</Link>
+                <Link to='/' className="btn btn-secondary w-100">Already a user? Login</Link>
               </form>
             </div>
           </div>

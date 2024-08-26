@@ -9,22 +9,22 @@ import {
 } from 'react-router-dom'
 import Login from './screens/Login';
 
-import Home from './screens/Home';
+
 import Pricing from './screens/Signup';
 import Navbar from './components/Navbar';
-import Resume_components from './components/Resume_compnent'
-import ResumeDisplay from './components/Resume_display';
+import Resumeform from './screens/Resumeform';
+import Resumelist from './screens/Resumelist';
 function App() {
   return (
     <Router>
       <div>
         <Routes>
 
-          <Route path="/" element={<Navbar/>}/>
-          <Route path="/login" element={<Login/>}/>
+          <Route path="/home" element={<Navbar/>}/>
+          <Route path="/" element={<Login/>}/>
           <Route path="/pricing" element={<Pricing/>}/>
-          <Route path="/resume-form" element={<Resume_components/>} />
-        <Route path="/resume-display" element={<ResumeDisplay />} />
+          <Route path="/resumeform" element={<Resumeform/>} />
+          <Route path='/resumelist' element={<Resumelist/>}/>
         </Routes>
       </div>
     </Router>
