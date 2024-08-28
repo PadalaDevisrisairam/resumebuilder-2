@@ -49,7 +49,7 @@
 
 import React, { useState } from 'react'
 
-import { useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigator=useNavigate();
@@ -79,10 +79,14 @@ function Login() {
     });
     const json = await response.json();
     console.log(json);
-    if (json.success === false) {
+    if (json.success === "youdonot") {
       alert("you donot have account buddy please signup first");
     }
-     else {
+    else if(json.success === "passwordwrong")
+    {
+      alert("password is wrong");
+    }  
+     else if(json.success===true){
       alert("You nailed it");
       navigator("/home");
     }
@@ -98,14 +102,15 @@ function Login() {
                 <form onSubmit={handleSubmit}>
                   <div class="form-group">
                     <label htmlFor="exampleInputusername">Username</label>
-                    <input type="text" class="form-control" id="exampleInputusername" placeholder="Enter username" name="name" onChange={onChange} />
+                    <input type="text" class="form-control" id="exampleInputusername" placeholder="Enter username" name="name" value={state.name} onChange={onChange} />
                   </div>
                   <div class="form-group">
                     <label htmlFor="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name='password' onChange={onChange} />
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" value={state.password} onChange={onChange} />
                   </div>
                   <div className='d-flex justify-content-center'>
                     <button type="submit" className="btn btn-primary mt-2">Submit</button>
+                    <Link to="/signup" className='btn btn-success mt-2 ms-2'>don't have account</Link>
                   </div>
 
                 </form>

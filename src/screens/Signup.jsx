@@ -77,9 +77,10 @@
 // export default Signup
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 function Signup() {
+  const navigator=useNavigate();
   const [state, setState] = useState({
     name: '',
     firstname: '',
@@ -110,10 +111,14 @@ function Signup() {
     });
     const json = await response.json();
     console.log(json);
-    if (!json.success) {
+    if(json.success === "already there"){
+      alert("User already exists");
+    }
+    else if (!json.success) {
       alert("Try another time buddy");
     } else {
       alert("You nailed it");
+      navigator("/");
     }
   }
 

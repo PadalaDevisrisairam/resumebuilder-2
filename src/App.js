@@ -10,10 +10,11 @@ import {
 import Login from './screens/Login';
 
 
-import Pricing from './screens/Signup';
+
 import Navbar from './components/Navbar';
 import Resumeform from './screens/Resumeform';
 import Resumelist from './screens/Resumelist';
+import Signup from './screens/Signup';
 function App() {
   return (
     <Router>
@@ -22,7 +23,7 @@ function App() {
 
           <Route path="/home" element={<Navbar/>}/>
           <Route path="/" element={<Login/>}/>
-          <Route path="/pricing" element={<Pricing/>}/>
+          <Route path="/signup" element={<Signup/>}/>
           <Route path="/resumeform" element={<Resumeform/>} />
           <Route path='/resumelist' element={<Resumelist/>}/>
         </Routes>

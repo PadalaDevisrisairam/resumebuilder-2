@@ -23,7 +23,7 @@ export default function Navbar() {
                 <Link className="nav-link" to="/">Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/pricing">Signup</Link>
+                <Link className="nav-link" to="/signup">Signup</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link disabled" aria-disabled="true">Disabled</Link>
@@ -38,6 +38,7 @@ export default function Navbar() {
           <h1 className="title">Build Your Professional Resume</h1>
           <p className="subtitle">Create a stunning resume in minutes with our easy-to-use builder.</p>
           <Link className='btn btn-success ' to='/resumeform'>Create-Resume</Link>
+          <Link className='btn btn-success ms-2' to='/resumelist'>view created resumes</Link>
         </header>
 
         <section className="features-section">

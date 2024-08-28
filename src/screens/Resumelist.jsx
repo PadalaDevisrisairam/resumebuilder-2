@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
 
 function Resumelist() {
   const [resumes, setResumes] = useState([]);
@@ -27,6 +28,7 @@ function Resumelist() {
   return (
     <div className="container mt-5">
       <h2 className="mb-4 text-center">Resume List</h2>
+      <Link to="/home" className='btn btn-primary'>Back Home</Link>
       <div className="row">
         {resumes.map((resume) => (
           <div className="col-md-4 mb-4" key={resume._id}>

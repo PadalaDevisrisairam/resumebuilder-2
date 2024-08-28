@@ -1,7 +1,7 @@
 // ResumeInputForm.js
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 const Resumeform = () => {
     const navigator=useNavigate();
@@ -59,6 +59,7 @@ const Resumeform = () => {
                         <div className='card shadow'>
                             <div className='card-body'>
                                 <h2 className="mb-4">Resume Input Form</h2>
+                                <Link to="/home" className='btn btn-primary'>Back Home</Link>
                                 <div className="mb-3">
                                     <label htmlFor="name" className="form-label">Name</label>
                                     <input

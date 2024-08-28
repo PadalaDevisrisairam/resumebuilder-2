@@ -16,11 +16,11 @@ loginroute.post('/loginroute',
         try {
             const data = await user.findOne({ name })
             if (!data) {
-                return res.status(400).json({ error: "you donot have account buddy please signup first" })
+                return res.json({ success: "youdonot" })
             } 
             if (data.password !== req.body.password) {
                
-                return res.status(400).json({ error: "password is incorrect buddy" })
+                return res.json({ success: "passwordwrong" })
             }
             else {
                 res.json({ success: true })
